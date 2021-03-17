@@ -8,7 +8,7 @@ public class Email {
         System.out.print("Enter you E-mail: ");
         String mail = scan.nextLine();
         System.out.println(mail);
-        String exp = "^[a-zA-Z0-9]+[.+_-]*+[a-zA-Z0-9]+[@]+[a-zA-Z]+[.]+[a-zA-Z]{2,4}";
+        String exp = "^[a-zA-Z0-9]+([.+_-]{0,1}+[a-zA-Z0-9])*+[@]+[a-zA-Z]+[.]+[a-zA-Z]{2,4}+([.]{1}+[a-zA-Z]{0,2})*";
         if(Pattern.matches(exp, mail))
             System.out.println("Email Valid");
         else
